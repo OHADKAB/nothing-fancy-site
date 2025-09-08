@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ohadkab.github.io/nothing-fancy-site/sitemap.xml
