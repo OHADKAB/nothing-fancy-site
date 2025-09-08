@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>City Lines — Archival Fine Art Print | NOTHING FANCY</title>
+  <meta name="description" content="Archival giclée print on Hahnemühle. Signed & numbered. Sizes 12×18, 18×24, 24×36." />
+  <meta property="og:title" content="City Lines — Archival Fine Art Print">
+  <meta property="og:description" content="Signed & numbered, printed in NYC.">
+  <meta property="og:image" content="https://ohadkab.github.io/nothing-fancy-site/assets/hero.jpg">
+  <meta property="og:type" content="product">
+  <meta name="twitter:card" content="summary_large_image">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --bg:#0A0A0A; --panel:#0F0F0F; --text:#F5F5F5; --muted:#B3B3B3; --line:rgba(255,255,255,0.08); --accent:#D90416;
+    }
+    html,body{background:var(--bg);color:var(--text);}
+    .panel{background:var(--panel);}
+    .line{border-color:var(--line);}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Product",
+    "name":"City Lines — Archival Fine Art Print",
+    "image":["https://ohadkab.github.io/nothing-fancy-site/assets/hero.jpg"],
+    "description":"Archival giclée on Hahnemühle Photo Rag. Signed & numbered.",
+    "brand":{"@type":"Brand","name":"NOTHING FANCY"},
+    "offers":{
+      "@type":"AggregateOffer",
+      "lowPrice":"120",
+      "highPrice":"480",
+      "priceCurrency":"USD",
+      "availability":"https://schema.org/InStock"
+    }
+  }
+  </script>
+</head>
+<body class="font-sans">
+  <header class="sticky top-0 z-50 backdrop-blur panel/80 border-b line">
+    <div class="max-w-6xl mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2"><span class="inline-block w-3 h-3" style="background:var(--accent)"></span><div class="tracking-[0.12em] text-xs">NOTHING FANCY</div></div>
+      <nav class="hidden md:flex gap-8 tracking-[0.14em] text-[11px] uppercase text-[var(--muted)]">
+        <a href="/">Home</a><a href="/#shop">Shop</a><a href="/#series">Series</a><a href="/#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 md:px-8 py-10 md:py-16 grid md:grid-cols-12 gap-10">
+    <section class="md:col-span-7">
+      <img src="/assets/hero.jpg" alt="City Lines — archival giclée print" class="w-full object-cover rounded-[2px]" loading="eager" decoding="async">
+      <div class="mt-2 text-[12px] text-[var(--muted)]">Archival papers • Pigment inks • Color-checked</div>
+    </section>
+
+    <aside class="md:col-span-5">
+      <h1 class="font-serif text-3xl md:text-4xl">City Lines</h1>
+      <p class="mt-3 text-sm text-[var(--muted)]">Archival giclée on Hahnemühle Photo Rag. Printed in NYC. Signed & numbered with a certificate of authenticity.</p>
+
+      <form class="mt-6 space-y-4">
+        <div>
+          <label class="block text-xs text-[var(--muted)] mb-1">Size</label>
+          <select class="w-full px-3 py-2 bg-transparent border border-[var(--line)] rounded">
+            <option>12×18 — $120 (Open)</option>
+            <option>18×24 — $230 (LE 25)</option>
+            <option>24×36 — $480 (LE 10)</option>
+          </select>
+        </div>
+        <button type="button" class="w-full px-4 py-3 border border-white rounded hover:opacity-80">Add to cart</button>
+        <div class="text-xs text-[var(--muted)]">Ships worldwide • Packed flat/tube • COA included (limited editions)</div>
+      </form>
+    </aside>
+  </main>
+
+  <footer class="panel border-t line">
+    <div class="max-w-6xl mx-auto px-4 md:px-8 py-10 grid md:grid-cols-4 gap-8">
+      <div class="md:col-span-2">
+        <div class="tracking-[0.12em] text-xs">NOTHING FANCY</div>
+        <p class="mt-3 text-sm text-[var(--muted)] max-w-prose">
+          Prints produced with museum-grade materials in NYC. Each print is inspected and accompanied by a certificate of authenticity.
+        </p>
+      </div>
+      <div>
+        <div class="font-serif">Shop</div>
+        <ul class="mt-2 text-sm text-[var(--muted)] space-y-1">
+          <li><a class="hover:underline" href="/#shop">All prints</a></li>
+          <li><a class="hover:underline" href="/#series">Series</a></li>
+          <li><a class="hover:underline" href="#">Care &amp; framing</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-serif">Collectors’ list</div>
+        <form class="mt-2 flex gap-2" onsubmit="event.preventDefault(); alert('Thanks!');">
+          <input class="flex-1 px-3 py-2 rounded-sm" style="background:var(--panel); border:1px solid var(--line); color:var(--text);" placeholder="Your email" />
+          <button class="px-3 py-2 rounded-sm" style="background:transparent; border:1px solid var(--text);">Subscribe</button>
+        </form>
+        <div class="mt-2 text-xs text-[var(--muted)]">By subscribing you agree to our policies.</div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 md:px-8 py-4 text-[11px] text-[var(--muted)] flex items-center">
+      © 2025 NOTHING FANCY
+    </div>
+  </footer>
+</body>
+</html>
