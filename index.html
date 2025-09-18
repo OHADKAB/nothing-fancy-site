@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NOTHING FANCY — Photo Prints</title>
+  <meta name="description" content="Photo prints. Nothing fancy. Bring life and color to sad walls." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --bg:#0A0A0A; --panel:#0F0F0F; --text:#F5F5F5; --muted:#B3B3B3; --line:rgba(255,255,255,.08); --accent:#D90416;
+    }
+    html,body{background:var(--bg);color:var(--text)}
+    .panel{background:var(--panel)} .line{border-color:var(--line)}
+    .nf-link{ text-decoration:underline; text-underline-offset:4px; text-decoration-color:transparent; transition:.15s }
+    .nf-link:hover{ text-decoration-color:var(--text) }
+    img{display:block;max-width:100%;height:auto}
+  </style>
+</head>
+<body class="font-sans">
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 backdrop-blur panel/80 border-b line">
+    <div class="max-w-6xl mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-3 h-3" style="background:var(--accent)"></span>
+        <div class="tracking-[0.12em] text-xs">NOTHING FANCY</div>
+      </div>
+      <nav class="hidden md:flex items-center gap-8 tracking-[0.14em] text-[11px] uppercase text-[var(--muted)]">
+        <a href="#shop" class="hover:text-[var(--text)]">Shop</a>
+        <a href="#series" class="hover:text-[var(--text)]">Series</a>
+        <a href="#about" class="hover:text-[var(--text)]">About</a>
+      </nav>
+      <a href="#cart" class="tracking-[0.14em] text-[11px] uppercase text-[var(--muted)] hover:text-[var(--text)]">Cart (0)</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="border-b line panel">
+    <div class="max-w-6xl mx-auto px-4 md:px-8 py-10 md:py-16 grid md:grid-cols-12 gap-8 items-end">
+      <div class="md:col-span-6 order-2 md:order-1">
+        <h1 class="font-serif text-3xl md:text-5xl font-bold leading-[1.1] tracking-tight">
+          PHOTO PRINTS. <span class="border-b-2 border-[var(--accent)] pb-1 whitespace-nowrap">NOTHING FANCY.</span>
+        </h1>
+        <p class="mt-4 text-base md:text-lg font-serif text-[var(--muted)] max-w-prose">
+          We bring life (and a bit of color) to sad walls.
+        </p>
+        <div class="mt-6 flex gap-6 text-sm">
+          <a href="#shop" class="border-b pb-[2px] border-[var(--text)]">Shop all</a>
+          <a href="#series" class="nf-link">Browse series</a>
+        </div>
+      </div>
+      <div class="md:col-span-6 order-1 md:order-2">
+        <img src="assets/hero.jpg" alt="NOTHING FANCY — Hero" class="w-full aspect-[3/2] object-cover rounded-[2px]" loading="eager" decoding="async">
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED SERIES -->
+  <section id="series" class="border-b line">
+    <div class="max-w-6xl mx-auto px-4 md:px-8 py-14 md:py-20">
+      <div class="flex items-end justify-between">
+        <h2 class="font-serif text-2xl md:text-3xl">Featured series</h2>
+        <a href="#shop" class="text-sm nf-link">View all</a>
+      </div>
+
+      <div class="mt-6 grid grid-cols-2 md:grid-cols-3 gap-6">
+        <img src="assets/000283040002.jpg" alt="Print 1" class="rounded-sm shadow-lg aspect-[4/5] object-cover">
+        <img src="assets/000410420005 copy.jpg" alt="Print 2" class="rounded-sm shadow-lg aspect-[4/5] object-cover">
+        <img src="assets/000290010004 copy.jpg" alt="Print 3" class="rounded-sm shadow-lg aspect-[4/5] object-cover">
+        <img src="assets/66708a5541193c7e6ebf36c4_KAB_1617.jpg" alt="Print 4" class="rounded-sm shadow-lg aspect-[4/5] object-cover">
+        <img src="assets/ART--2.jpg" alt="Print 5" class="rounded-sm shadow-lg aspect-[4/5] object-cover">
+        <img src="assets/45309_OKA2.jpg" alt="Print 6" class="rounded-sm shadow-lg aspect-[4/5] object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOP -->
+  <section id="shop" class="border-b line">
+    <div class="max-w-6xl mx-auto px-4 md:px-8 py-14 md:py-20">
+      <div class="flex items-end justify-between">
+        <h2 class="font-serif text-2xl md:text-3xl">Shop prints</h2>
+        <div class="flex items-center gap-4 text-xs text-[var(--muted)]">
+          <select class="px-2 py-1 rounded-sm bg-[var(--panel)] border line">
+            <option>All sizes</option><option>12×18</option><option>18×24</option><option>24×36</option>
+          </select>
+          <select class="px-2 py-1 rounded-sm bg-[var(--panel)] border line">
+            <option>All editions</option><option>Open</option><option>Limited</option>
+          </select>
+        </div>
+      </div>
+      <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
+        <a href="#" class="group block">
+          <div class="aspect-[4/5] rounded-sm bg-[var(--panel)]"></div>
+          <div class="mt-2 text-sm flex items-center justify-between">
+            <span>City Lines</span><span class="text-[var(--muted)]">from $120</span>
+          </div>
+        </a>
+        <a href="#" class="group block">
+          <div class="aspect-[4/5] rounded-sm bg-[var(--panel)]"></div>
+          <div class="mt-2 text-sm flex items-center justify-between">
+            <span>Hudson Mist</span><span class="text-[var(--muted)]">LE 25</span>
+          </div>
+        </a>
+        <a href="#" class="group block">
+          <div class="aspect-[4/5] rounded-sm bg-[var(--panel)]"></div>
+          <div class="mt-2 text-sm flex items-center justify-between">
+            <span>Fifth Ave Flow</span><span class="text-[var(--muted)]">from $120</span>
+          </div>
+        </a>
+        <a href="#" class="group block">
+          <div class="aspect-[4/5] rounded-sm bg-[var(--panel)]"></div>
+          <div class="mt-2 text-sm flex items-center justify-between">
+            <span>Chrysler Light</span><span class="text-[var(--muted)]">LE 10</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="about" class="panel">
+    <div class="max-w-6xl mx-auto px-4 md:px-8 py-16 grid md:grid-cols-4 gap-8 border-b line">
+      <div class="md:col-span-2">
+        <div class="tracking-[0.12em] text-xs">NOTHING FANCY</div>
+        <p class="mt-3 text-sm text-[var(--muted)] max-w-prose">
+          Prints produced with museum-grade materials in NYC. Each print is inspected and accompanied by a certificate of authenticity.
+        </p>
+      </div>
+      <div>
+        <div class="font-serif">Shop</div>
+        <ul class="mt-2 text-sm text-[var(--muted)] space-y-1">
+          <li><a class="hover:underline" href="#shop">All prints</a></li>
+          <li><a class="hover:underline" href="#series">Series</a></li>
+          <li><a class="hover:underline" href="#">Care &amp; framing</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-serif">Collectors’ list</div>
+        <form class="mt-2 flex gap-2" onsubmit="event.preventDefault(); alert('Thanks!');">
+          <input class="flex-1 px-3 py-2 rounded-sm bg-[var(--panel)] border line text-[var(--text)]" placeholder="Your email" />
+          <button class="px-3 py-2 rounded-sm border text-[var(--text)]">Subscribe</button>
+        </form>
+        <div class="mt-2 text-xs text-[var(--muted)]">By subscribing you agree to our policies.</div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 md:px-8 py-4 text-[11px] text-[var(--muted)] flex items-center">
+      © 2025 NOTHING FANCY
+    </div>
+  </footer>
+
+</body>
+</html>
