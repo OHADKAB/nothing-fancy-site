@@ -3,65 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nothing Fancy</title>
+  <title>Nothing Fancy — Featured Prints</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #fff;
-      text-align: center;
-    }
-    header {
-      padding: 20px;
-      font-size: 24px;
-      font-weight: bold;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
-    .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    }
-    .caption {
-      margin-top: 8px;
-      font-size: 16px;
-      color: #aaa;
-    }
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#0b0b0b;color:#fff}
+    header{padding:16px 24px;font-weight:700;letter-spacing:.08em;border-bottom:1px solid rgba(255,255,255,.08)}
+    .wrap{max-width:1200px;margin:0 auto;padding:24px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+    .card img{width:100%;height:auto;display:block;border-radius:6px;background:#111;box-shadow:0 6px 20px rgba(0,0,0,.4)}
+    .cap{font-size:14px;color:#bdbdbd;margin-top:8px}
   </style>
 </head>
 <body>
-  <header>NOTHING FANCY – Featured Prints</header>
-  <div class="gallery">
-    <div>
-      <img src="assets/hero.jpg" alt="Hero">
-      <div class="caption">Hero</div>
-    </div>
-    <div>
-      <img src="assets/000283040002.jpg" alt="Print 1">
-      <div class="caption">Print 1</div>
-    </div>
-    <div>
-      <img src="assets/000393000005.jpg" alt="Print 2">
-      <div class="caption">Print 2</div>
-    </div>
-    <div>
-      <img src="assets/000410420005 copy.jpg" alt="Print 3">
-      <div class="caption">Print 3</div>
-    </div>
-    <div>
-      <img src="assets/000421900001.jpg" alt="Print 4">
-      <div class="caption">Print 4</div>
-    </div>
-    <div>
-      <img src="assets/45309_OKA2.jpg" alt="Print 5">
-      <div class="caption">Print 5</div>
+  <header>NOTHING FANCY — Featured Prints</header>
+  <div class="wrap">
+    <div class="grid">
+      <div class="card">
+        <img src="https://ohadkab.github.io/nothing-fancy-site/assets/hero.jpg" alt="hero">
+        <div class="cap">hero.jpg</div>
+      </div>
+      <div class="card">
+        <img src="https://ohadkab.github.io/nothing-fancy-site/assets/000283040002.jpg" alt="000283040002">
+        <div class="cap">000283040002.jpg</div>
+      </div>
+      <div class="card">
+        <img src="https://ohadkab.github.io/nothing-fancy-site/assets/000393000005.jpg" alt="000393000005">
+        <div class="cap">000393000005.jpg</div>
+      </div>
+      <div class="card">
+        <img src="https://ohadkab.github.io/nothing-fancy-site/assets/000410420005%20copy.jpg" alt="000410420005 copy">
+        <div class="cap">000410420005 copy.jpg</div>
+      </div>
+      <div class="card">
+        <img src="https://ohadkab.github.io/nothing-fancy-site/assets/000421900001.jpg" alt="000421900001">
+        <div class="cap">000421900001.jpg</div>
+      </div>
+      <div class="card">
+        <img src="https://ohadkab.github.io/nothing-fancy-site/assets/45309_OKA2.jpg" alt="45309_OKA2">
+        <div class="cap">45309_OKA2.jpg</div>
+      </div>
     </div>
   </div>
 </body>
