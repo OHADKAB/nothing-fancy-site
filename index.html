@@ -5,40 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NOTHING FANCY — Photo Prints</title>
   <style>
-    :root{
-      --bg:#0b0b0b; --text:#ffffff; --muted:#bdbdbd; --accent:#d90416;
-      --max:1220px; --pad:24px;
-    }
+    :root{ --bg:#0b0b0b; --text:#fff; --muted:#bdbdbd; --accent:#d90416; --max:1220px; --pad:24px }
     *{box-sizing:border-box}
     html,body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    header{padding:16px var(--pad);border-bottom:1px solid rgba(255,255,255,.08);text-align:center;font-weight:700;letter-spacing:.08em}
     .wrap{max-width:var(--max);margin:0 auto;padding:var(--pad)}
-    header{padding:16px var(--pad);border-bottom:1px solid rgba(255,255,255,.08)}
-    .brand{font-weight:700;letter-spacing:.08em;text-align:center}
-    /* HERO */
     .hero{padding:48px var(--pad) 28px}
-    .hero h1{margin:0;font-weight:800;letter-spacing:.02em;line-height:1.15;text-align:center}
+    .hero h1{margin:0;text-align:center;line-height:1.15}
+    .hero .l1,.hero .l2{font-weight:800;letter-spacing:.02em}
     .hero .l1{font-size:34px}
-    .hero .l2{font-size:34px;white-space:nowrap;border-bottom:2px solid var(--accent);display:inline-block;padding-bottom:2px}
+    .hero .l2{font-size:34px;border-bottom:2px solid var(--accent);display:inline-block;padding-bottom:2px;white-space:nowrap}
     .hero p{margin:14px 0 0;text-align:center;color:var(--muted);font-size:16px}
-    /* GRID */
+    @media (min-width:900px){ .hero .l1,.hero .l2{font-size:44px} }
     .grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));padding-top:22px;padding-bottom:40px}
     .card{background:#111;border-radius:10px;box-shadow:0 10px 28px rgba(0,0,0,.35);overflow:hidden}
-    .card img{width:100%;height:360px;object-fit:cover;display:block}
-    @media (min-width:900px){
-      .hero .l1,.hero .l2{font-size:44px}
-      .card img{height:420px}
-    }
-    /* no captions/tooltips */
-    img[alt]{/* keep alt for accessibility without showing anything on screen */}
+    .card img{width:100%;height:420px;object-fit:cover;display:block}
   </style>
 </head>
 <body>
-  <header><div class="brand">NOTHING FANCY</div></header>
+  <header>NOTHING FANCY</header>
 
   <section class="wrap hero">
     <h1>
-      <span class="l1">PHOTO PRINTS.</span>
-      <br>
+      <span class="l1">PHOTO PRINTS.</span><br>
       <span class="l2">NOTHING FANCY.</span>
     </h1>
     <p>We bring life (and a bit of color) to sad walls.</p>
@@ -47,22 +36,22 @@
   <main class="wrap">
     <div class="grid">
       <div class="card">
-        <img src="https://ohadkab.github.io/nothing-fancy-site/assets/hero.jpg?v=3" alt="Hero">
+        <img src="https://raw.githubusercontent.com/OHADKAB/nothing-fancy-site/main/assets/hero.jpg?v=4" alt="Hero">
       </div>
       <div class="card">
-        <img src="https://ohadkab.github.io/nothing-fancy-site/assets/000283040002.jpg?v=3" alt="000283040002">
+        <img src="https://raw.githubusercontent.com/OHADKAB/nothing-fancy-site/main/assets/000283040002.jpg?v=4" alt="000283040002">
       </div>
       <div class="card">
-        <img src="https://ohadkab.github.io/nothing-fancy-site/assets/000393000005.jpg?v=4" alt="000393000005">
+        <img src="https://raw.githubusercontent.com/OHADKAB/nothing-fancy-site/main/assets/000393000005.jpg?v=5" alt="000393000005">
       </div>
       <div class="card">
-        <img src="https://ohadkab.github.io/nothing-fancy-site/assets/000410420005%20copy.jpg?v=3" alt="000410420005 copy">
+        <img src="https://raw.githubusercontent.com/OHADKAB/nothing-fancy-site/main/assets/000410420005%20copy.jpg?v=4" alt="000410420005 copy">
       </div>
       <div class="card">
-        <img src="https://ohadkab.github.io/nothing-fancy-site/assets/000421900001.jpg?v=3" alt="000421900001">
+        <img src="https://raw.githubusercontent.com/OHADKAB/nothing-fancy-site/main/assets/000421900001.jpg?v=4" alt="000421900001">
       </div>
       <div class="card">
-        <img src="https://ohadkab.github.io/nothing-fancy-site/assets/45309_OKA2.jpg?v=3" alt="45309_OKA2">
+        <img src="https://raw.githubusercontent.com/OHADKAB/nothing-fancy-site/main/assets/45309_OKA2.jpg?v=4" alt="45309_OKA2">
       </div>
     </div>
   </main>
