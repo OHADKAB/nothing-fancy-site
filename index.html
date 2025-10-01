@@ -1,105 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NOTHING FANCY — Photo Prints</title>
-  <meta name="description" content="Photo prints. Nothing fancy. We bring life (and a bit of color) to sad walls." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOTHING FANCY</title>
   <style>
-    :root{ --bg:#0b0b0b; --text:#fff; --muted:#bdbdbd; --accent:#d90416; --max:1220px; --pad:24px }
-    *{ box-sizing:border-box }
-    html,body{ margin:0; background:var(--bg); color:var(--text); font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif }
-    header{ padding:16px var(--pad); border-bottom:1px solid rgba(255,255,255,.08); text-align:center; font-weight:700; letter-spacing:.08em }
-    .wrap{ max-width:var(--max); margin:0 auto; padding:var(--pad) }
-    .hero{ padding:48px var(--pad) 28px }
-    .hero h1{ margin:0; text-align:center; line-height:1.15; font-weight:800; letter-spacing:.02em }
-    .hero .l1,.hero .l2{ font-size:34px }
-    .hero .l2{ border-bottom:2px solid var(--accent); display:inline-block; padding-bottom:2px; white-space:nowrap }
-    .hero p{ margin:14px 0 0; text-align:center; color:var(--muted); font-size:16px }
-    @media (min-width:900px){ .hero .l1,.hero .l2{ font-size:44px } }
-    .grid{ display:grid; gap:24px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); padding-top:22px; padding-bottom:40px }
-    .card{ background:#111; border-radius:10px; box-shadow:0 10px 28px rgba(0,0,0,.35); overflow:hidden }
-    .card img{ width:100%; height:420px; object-fit:cover; display:block; background:#0f0f0f }
-    footer{ padding:28px var(--pad); border-top:1px solid rgba(255,255,255,.08); color:var(--muted); text-align:center; font-size:13px }
-  </style>
-  <script>
-    // טיפול אוטומטי בתמונות שבורות: מנסה שם חלופי ואח"כ מסתיר את הכרטיס
-    function handleImgError(img){
-      const triedAlt = img.dataset.triedAlt === "1";
-      if(!triedAlt && img.dataset.altsrc){
-        img.dataset.triedAlt = "1";
-        img.src = img.dataset.altsrc + (img.src.includes("?") ? "&" : "?") + "v=" + Date.now();
-      }else{
-        const card = img.closest(".card"); if(card) card.style.display = "none";
-      }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
     }
-  </script>
+
+    header {
+      padding: 40px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.2rem;
+      color: #aaa;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+  </style>
 </head>
 <body>
-  <header>NOTHING FANCY</header>
-
-  <section class="wrap hero">
-    <h1>
-      <span class="l1">PHOTO PRINTS.</span><br>
-      <span class="l2">NOTHING FANCY.</span>
-    </h1>
+  <header>
+    <h1>PHOTO PRINTS. NOTHING FANCY.</h1>
     <p>We bring life (and a bit of color) to sad walls.</p>
+  </header>
+
+  <section class="gallery">
+    <img src="assets/hero.jpg" alt="Hero Image">
+    <img src="assets/000283040002.jpg" alt="Print 1">
+    <img src="assets/000393000005.jpg" alt="Print 2">
+    <img src="assets/000410420005 copy.jpg" alt="Print 3">
+    <img src="assets/000421900001.jpg" alt="Print 4">
+    <img src="assets/45309_OKA2.jpg" alt="Print 5">
   </section>
-
-  <main class="wrap">
-    <div class="grid">
-      <!-- 1 -->
-      <div class="card">
-        <img
-          src="https://ohadkab.github.io/nothing-fancy-site/assets/hero.jpg?v=6"
-          alt="Hero"
-          onerror="handleImgError(this)"
-        >
-      </div>
-      <!-- 2 -->
-      <div class="card">
-        <img
-          src="https://ohadkab.github.io/nothing-fancy-site/assets/000283040002.jpg?v=6"
-          alt="000283040002"
-          onerror="handleImgError(this)"
-        >
-      </div>
-      <!-- 3 (בעייתית לשעבר) -->
-      <div class="card">
-        <img
-          src="https://ohadkab.github.io/nothing-fancy-site/assets/000393000005.jpg?v=7"
-          data-altsrc="https://ohadkab.github.io/nothing-fancy-site/assets/print6.jpg"
-          alt="Print 3"
-          onerror="handleImgError(this)"
-        >
-      </div>
-      <!-- 4 -->
-      <div class="card">
-        <img
-          src="https://ohadkab.github.io/nothing-fancy-site/assets/000410420005%20copy.jpg?v=6"
-          alt="000410420005 copy"
-          onerror="handleImgError(this)"
-        >
-      </div>
-      <!-- 5 -->
-      <div class="card">
-        <img
-          src="https://ohadkab.github.io/nothing-fancy-site/assets/000421900001.jpg?v=6"
-          alt="000421900001"
-          onerror="handleImgError(this)"
-        >
-      </div>
-      <!-- 6 -->
-      <div class="card">
-        <img
-          src="https://ohadkab.github.io/nothing-fancy-site/assets/45309_OKA2.jpg?v=6"
-          alt="45309_OKA2"
-          onerror="handleImgError(this)"
-        >
-      </div>
-    </div>
-  </main>
-
-  <footer>© 2025 NOTHING FANCY</footer>
 </body>
 </html>
