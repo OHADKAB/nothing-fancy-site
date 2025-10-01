@@ -1,0 +1,153 @@
+/* --- Global & Minimalist Base --- */
+body {
+    font-family: 'Montserrat', sans-serif; /* Clean, modern, "Tech" font */
+    margin: 0;
+    background-color: #ffffff; 
+    color: #1e1e1e;
+    line-height: 1.6;
+    padding-top: 80px; 
+    text-align: left; /* Default left-to-right */
+}
+
+/* --- Header & Navigation - The "NOTHING FANCY" Look --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    border-bottom: 1px solid #eeeeee; /* Minimalist separator */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px; /* A subtle, confident tech look */
+}
+
+nav a {
+    text-decoration: none;
+    color: #1e1e1e;
+    margin-left: 25px;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #a0a0a0; /* Subtle hover effect */
+}
+
+/* --- Product Layout - Modern Grid --- */
+.product-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Image slightly wider than details */
+    gap: 80px;
+    width: 85%;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* --- Image Area - Soft Vintage Effect --- */
+.image-area {
+    padding: 0;
+    /* Optional: Add a subtle border or light box shadow for a 'framed' effect */
+}
+
+.print-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* The Vintage Touch: slightly desaturated and warmer */
+    filter: grayscale(10%) sepia(5%) brightness(105%); 
+    border: 1px solid #e0e0e0;
+}
+
+/* --- Details Area - Clean Tech Vibe --- */
+.product-title {
+    font-size: 42px;
+    font-weight: 300; /* Light weight for elegance and modernity */
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 28px;
+    font-weight: 700;
+    color: #555;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 15px;
+}
+
+.option-label, .option-select {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.option-select {
+    padding: 12px 10px;
+    border: 1px solid #1e1e1e; /* Stark, high-contrast border */
+    border-radius: 0; 
+    background-color: white;
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.add-to-cart-button {
+    width: 100%;
+    padding: 18px 0;
+    background-color: #1e1e1e; /* Bold, non-fancy black button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-button:hover {
+    background-color: #555; 
+}
+
+/* --- Description Details - Vintage Accent --- */
+.description-heading {
+    font-family: 'Playfair Display', serif; /* The "Vintage" font touch */
+    font-style: italic;
+    font-size: 28px;
+    margin-top: 50px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.vintage-note {
+    font-size: 13px;
+    opacity: 0.6; 
+    margin-top: 20px;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 900px) {
+    .product-container {
+        grid-template-columns: 1fr; 
+        width: 90%;
+        gap: 40px;
+    }
+    .header {
+        padding: 15px 20px;
+    }
+    .product-title {
+        font-size: 32px;
+    }
+}
