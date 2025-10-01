@@ -1,69 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NOTHING FANCY</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #fff;
-      text-align: center;
-    }
-
-    header {
-      padding: 40px 20px 20px;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      font-weight: bold;
-      margin: 0;
-    }
-
-    header p {
-      margin: 10px 0 0;
-      font-size: 1.2rem;
-      color: #aaa;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      padding: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .gallery img {
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.7);
-      transition: transform 0.3s;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.03);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The City Print | NOTHING FANCY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>PHOTO PRINTS. NOTHING FANCY.</h1>
-    <p>We bring life (and a bit of color) to sad walls.</p>
-  </header>
 
-  <section class="gallery">
-    <img src="assets/hero.jpg" alt="Hero Image">
-    <img src="assets/000283040002.jpg" alt="Print 1">
-    <img src="assets/000393000005.jpg" alt="Print 2">
-    <img src="assets/000410420005 copy.jpg" alt="Print 3">
-    <img src="assets/000421900001.jpg" alt="Print 4">
-    <img src="assets/45309_OKA2.jpg" alt="Print 5">
-  </section>
+    <header class="header">
+        <div class="logo">NOTHING FANCY</div>
+        <nav>
+            <a href="#">Prints</a>
+            <a href="#">About</a>
+            <a href="#">Cart (0)</a>
+        </nav>
+    </header>
+
+    <main class="product-container">
+        <div class="image-area">
+            <img src="placeholder-print-image.jpg" alt="Tel Aviv City Streets Print" class="print-image">
+        </div>
+
+        <div class="details-area">
+            <h1 class="product-title">Tel Aviv Street Grid 01</h1>
+            
+            <p class="product-price">$249.00 USD</p>
+
+            <div class="options">
+                <label for="size" class="option-label">Select Size:</label>
+                <select id="size" name="size" class="option-select">
+                    <option value="a4">A4 (8.3 x 11.7 in)</option>
+                    <option value="a3">A3 (11.7 x 16.5 in)</option>
+                    <option value="a2">A2 (16.5 x 23.4 in)</option>
+                </select>
+
+                <label for="material" class="option-label">Select Material:</label>
+                <select id="material" name="material" class="option-select">
+                    <option value="matt">Archival Matte Paper</option>
+                    <option value="canvas">Fine Art Canvas</option>
+                </select>
+            </div>
+
+            <button class="add-to-cart-button">ADD TO CART | &gt;</button>
+
+            <div class="description">
+                <h2 class="description-heading">Details:</h2>
+                <p>
+                    This unique print captures the intersection of futuristic architecture and aged, organic textures. 
+                    The print is produced using advanced Giclée technology on acid-free cotton paper, guaranteeing exceptional color fidelity and longevity (**The Tech Vibe**).
+                </p>
+                <p class="vintage-note">
+                    * Each piece is signed, numbered, and dated by the artist.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>NF Design Code v1.0 | Nothing Fancy. Just Quality.</p>
+    </footer>
+
 </body>
 </html>
